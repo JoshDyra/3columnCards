@@ -12,25 +12,131 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    :root {
+      --color1: #DBA65C;
+      --color2: #5BAADB;
+      --color3: #2E6A8F;
+      --color4: #EFEFEF;
+    }
+
+    body, html, * {
+      margin: 0; padding: 0;
+    }
+
+    .grid {
+      --auto-grid-min-size: 20rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(var(--auto-grid-min-size), 1fr));
+    }
+
+    section {
+      padding: 6rem 3rem;
+      background: top no-repeat;
+      color: var(--color4);
+      font-size: 1rem;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    }
+
+    section:nth-child(1) {
+      background: url('images/icon-sedans.svg') no-repeat;
+      background-position: 3rem 3rem;
+      background-color: var(--color1);
+    }
+
+    section:nth-child(2) {
+      background: url('images/icon-suvs.svg') no-repeat;
+      background-position: 3rem 3rem;
+      background-color: var(--color2);
+    }
+
+    section:nth-child(3) {
+      background: url('images/icon-luxury.svg') no-repeat;
+      background-position: 3rem 3rem;
+      background-color: var(--color3);
+    }
+
+    section h2 {
+      padding: 1rem 0;
+      font-size: 2rem;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    section p { 
+      padding: 1rem 0;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    section .button {
+
+      position:relative;
+      bottom: -2rem;
+      background: transparent;
+      border: 1px solid var(--color4);
+      padding: 15px 30px;
+      border-radius: 25px;
+      min-width: 50%;
+      background-color: var(--color4);
+      cursor: pointer;
+    }
+
+    .one { color: var(--color1);  }
+    .two { color: var(--color2); }
+    .three { color: var(--color3); }
+
+    .button:hover {
+      background: transparent;
+      color: var(--color4);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    }
+
+
+    .wrapper {
+      margin: 0 auto;
+      max-width: 60%;
+    }
   </style>
 </head>
 <body>
-  
-  Sedans
-  Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
-  or on your next road trip.
-
-  SUVs
-  Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
-  and off-road adventures.
-
-  Luxury
-  Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
-  rental and arrive in style.
+  <div class="wrapper">
+<div class="grid">
+  <section>
+    <h2>Sedans</h2>
+    <p>
+      Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+      or on your next road trip.
+    </p>
+    <button class="button one">Learn More</button>
+  </section>
+  <section>
+    <h2>SUVs</h2>
+    <p>
+      Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+      and off-road adventures.
+    </p>
+    <button class="button two">Learn More</button>
+  </section>
+  <section>
+    <h2>Luxury</h2>
+    <p>
+      Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+      rental and arrive in style.
+    </p>
+    <button class="button three">Learn More</button>
+  </section>
+</div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="http://github.com/JoshDyra">Josh Dyra</a>.
   </div>
+
+</div>
+
+<script>
+
+</script>
+
 </body>
 </html>
