@@ -23,12 +23,14 @@
 
     body, html, * {
       margin: 0; padding: 0;
+      font-family:Arial, Helvetica, sans-serif;
     }
 
     .grid {
       --auto-grid-min-size: 20rem;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(var(--auto-grid-min-size), 1fr));
+
     }
 
     section {
@@ -62,12 +64,11 @@
     section h2 {
       padding: 1rem 0;
       font-size: 2rem;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     
     section p { 
       padding: 1rem 0;
-      font-family:Arial, Helvetica, sans-serif;
     }
 
     section .button {
@@ -97,10 +98,9 @@
 
     .wrapper {
       margin: 10vw auto;
-      width: clamp(60%, 60%, 100%);
     }
     
-    @media screen and ( max-width : 1600px ) {
+    @media screen and ( max-width : 959px ) {
       section:nth-child(1) {
         border-radius: 15px 0 0 0;
       }
@@ -110,9 +110,14 @@
       section:nth-child(3) {
         border-radius: 0 0 15px 15px;
       }
+
+      .wrapper {
+      }
     }
 
-    @media screen and ( max-width : 1067px ) {
+    @media screen and ( max-width : 645px ) {
+      .wrapper {
+      }
       section:nth-child(1) {
         border-radius: 15px 15px 0 0;
       }
