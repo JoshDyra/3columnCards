@@ -15,9 +15,9 @@
     .attribution a { color: hsl(228, 45%, 44%); }
 
     :root {
-      --color1: #DBA65C;
-      --color2: #5BAADB;
-      --color3: #2E6A8F;
+      --color1: #DAA520;
+      --color2: #4682B4;
+      --color3: #008080;
       --color4: #EFEFEF;
     }
 
@@ -27,10 +27,17 @@
     }
 
     .grid {
+      /*
       --auto-grid-min-size: 20rem;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(var(--auto-grid-min-size), 1fr));
+      */
+      display: flex;
+      flex-wrap: wrap;
+    }
 
+    .grid > * {
+      flex: 1 1 20%;
     }
 
     section {
@@ -97,15 +104,16 @@
 
 
     .wrapper {
-      margin: 10vw auto;
+      width: 60%;
+      margin: 20vw auto;
     }
     
-    @media screen and ( max-width : 959px ) {
+    @media screen and ( max-width : 1199px ) {
       section:nth-child(1) {
         border-radius: 15px 0 0 0;
       }
       section:nth-child(2) {
-        border-radius: 0 15px 15px 0;
+        border-radius: 0 15px 0 0;
       }
       section:nth-child(3) {
         border-radius: 0 0 15px 15px;
@@ -113,7 +121,7 @@
 
     }
 
-    @media screen and ( max-width : 645px ) {
+    @media screen and ( max-width : 668px ) {
       section:nth-child(1) {
         border-radius: 15px 15px 0 0;
       }
@@ -122,6 +130,13 @@
       }
       section:nth-child(3) {
         border-radius: 0 0 15px 15px;
+      }
+    }
+
+    @media screen and (max-width: 320px) {
+      section {
+        width: 100%;
+        padding: 4rem 1.5rem;
       }
     }
 
